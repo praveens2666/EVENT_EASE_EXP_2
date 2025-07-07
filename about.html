@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventEase | About</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="custom-navbar">
+      <div class="logo"><a href="index.html">EventEase</a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="about-container">
+    <div class="about-row">
+      <div class="about-col about-text">
+        <h2>About EventEase</h2>
+        <p class="lead">We are a leading event planning company with 10+ years of experience, dedicated to making your special moments unforgettable. Our team brings creativity, professionalism, and passion to every event.</p>
+        <ul class="about-list">
+          <li>Personalized event planning</li>
+          <li>Award-winning team</li>
+          <li>Trusted by 500+ clients</li>
+        </ul>
+      </div>
+      <div class="about-col about-img" style="display: flex; justify-content:center;">
+        <img  src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=500&q=80" alt="Our team" />
+      </div>
+    </div>
+  </section>
+
+  <section class="journey-section" >
+    
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <h2 class="center">Our Journey</h2>
+    <ul class="timeline">
+      <li><span class="timeline-badge">2015</span> Founded</li>
+      <li><span class="timeline-badge">2018</span> 100th event</li>
+      <li><span class="timeline-badge">2022</span> Best Event Planner Award</li>
+    </ul></div>
+  </section>
+
+  <section class="testimonials-section">
+    <h2 class="center">What Our Clients Say</h2>
+    <div class="custom-carousel" id="testimonialCarousel">
+      <div class="carousel-slide active">
+        <blockquote>
+          <p>"Amazing team! They made everything so easy and beautiful."</p>
+          <footer>- A Client</footer>
+        </blockquote>
+      </div>
+      <div class="carousel-slide">
+        <blockquote>
+          <p>"They made my wedding perfect! Highly recommend."</p>
+          <footer>- B Client</footer>
+        </blockquote>
+      </div>
+      <button class="carousel-btn prev" onclick="carouselPrev('testimonialCarousel')">&#10094;</button>
+      <button class="carousel-btn next" onclick="carouselNext('testimonialCarousel')">&#10095;</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 EventEase. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">FB</a>
+        <a href="#">IG</a>
+        <a href="#">TW</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

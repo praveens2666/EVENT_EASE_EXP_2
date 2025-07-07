@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventEase | Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="custom-navbar">
+      <div class="logo"><a href="index.html">EventEase</a></div>
+      <nav>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-row">
+      <div class="hero-text">
+        <h1>Make Your Event Unforgettable</h1>
+        <p class="lead">We plan weddings, corporate events, and birthdays with style!</p>
+        <a href="gallery.html" class="cta">View Our Work</a>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b1a5b?auto=format&fit=crop&w=600&q=80" alt="Event" />
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <h2 class="center">Our Services</h2>
+    <div class="services-row">
+      <div class="service-card" onclick="openModal('Weddings', 'Elegant and memorable weddings tailored to your dreams.', 'https://www.w3schools.com/html/mov_bbb.mp4')">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Weddings">
+        <h5>Weddings</h5>
+        <p>Elegant and memorable weddings tailored to your dreams.</p>
+      </div>
+      <div class="service-card" onclick="openModal('Corporate Events', 'Professional and creative solutions for your business gatherings.', 'https://www.w3schools.com/html/movie.mp4')">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Corporate Events">
+        <h5>Corporate Events</h5>
+        <p>Professional and creative solutions for your business gatherings.</p>
+      </div>
+      <div class="service-card" onclick="openModal('Birthdays', 'Fun and unique birthday parties for all ages.', 'https://www.w3schools.com/html/mov_bbb.mp4')">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Birthdays">
+        <h5>Birthdays</h5>
+        <p>Fun and unique birthday parties for all ages.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 EventEase. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">FB</a>
+        <a href="#">IG</a>
+        <a href="#">TW</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

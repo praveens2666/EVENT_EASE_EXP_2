@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventEase | Gallery</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="custom-navbar">
+      <div class="logo"><a href="index.html">EventEase</a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="gallery-section">
+    <h2 class="center">Gallery</h2>
+    <div class="gallery-filters">
+      <button class="filter-btn active" onclick="filterGallery('all')">All</button>
+      <button class="filter-btn" onclick="filterGallery('wedding')">Weddings</button>
+      <button class="filter-btn" onclick="filterGallery('corporate')">Corporate</button>
+      <button class="filter-btn" onclick="filterGallery('birthday')">Birthday</button>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item wedding" onclick="openModal('Elegant Wedding', 'Beautiful decor & setup.')">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Wedding 1">
+        <h5>Elegant Wedding</h5>
+        <p>Beautiful decor & setup.</p>
+      </div>
+      <div class="gallery-item corporate" onclick="openModal('Corporate Event', 'Professional and sleek.')">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Corporate 1">
+        <h5>Corporate Event</h5>
+        <p>Professional and sleek.</p>
+      </div>
+      <div class="gallery-item birthday" onclick="openModal('Birthday Bash', 'Fun & colorful.')">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Birthday 1">
+        <h5>Birthday Bash</h5>
+        <p>Fun & colorful.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="galleryModal" class="custom-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="galleryModalLabel"></h3>
+      <p id="galleryModalDesc"></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 EventEase. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">FB</a>
+        <a href="#">IG</a>
+        <a href="#">TW</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+  <script>
+    function openModal(title, desc) {
+      document.getElementById('galleryModalLabel').textContent = title;
+      document.getElementById('galleryModalDesc').textContent = desc;
+      document.getElementById('galleryModal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('galleryModal').style.display = 'none';
+    }
+    function filterGallery(type) {
+      var items = document.querySelectorAll('.gallery-item');
+      items.forEach(function(item) {
+        if (type === 'all' || item.classList.contains(type)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      document.querySelectorAll('.gallery-filters .filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
